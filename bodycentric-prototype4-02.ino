@@ -3,9 +3,9 @@
 //**************Prototype04-Visual Power
 //**************Reference Arduino Analog Read
 
-int LEDpin = 13;// led pot
-int lightSensor = A2;// Lightsensor pot
-int n = 0; // Default led value
+int LEDpin = 13;// LED port
+int lightSensor = A2;// Lightsensor port
+int n = 0; // Default LED value
 int lightSensorValue = 0; 
 int lightSensorPin = A2; 
 
@@ -17,7 +17,7 @@ void setup() {
 void loop() {
     lightSensorValue = analogRead(A2);
  n = analogRead(lightSensor);
- analogWrite(LEDpin, n/5);//Convert the lgihtSensor Value 0~1000 to Digitalvalue 0~255
+ analogWrite(LEDpin, n/4);//Convert the lgihtSensor Value 0~1000 to Digitalvalue 0~255
 
   Serial.print("\t sensor= ");
   Serial.println(lightSensorValue);
